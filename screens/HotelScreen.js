@@ -1,20 +1,24 @@
 
-import * as React from 'react';
-import { Avatar, Button, Card, Title, Paragraph } from 'react-native-paper';
+import React from 'react';
+import { View, Text, Button, Alert} from 'react-native';
+import Styles from './ScreenStyles';
+const styles = Styles();
 
-const MyComponent = () => (
-  <Card>
-    <Card.Title title="Card Title" subtitle="Card Subtitle" left={(props) => <Avatar.Icon {...props} icon="folder" />} />
-    <Card.Content>
-      <Title>Card title</Title>
-      <Paragraph>Card content</Paragraph>
-    </Card.Content>
-    <Card.Cover source={{ uri: 'https://picsum.photos/700' }} />
-    <Card.Actions>
-      <Button>Cancel</Button>
-      <Button>Ok</Button>
-    </Card.Actions>
-  </Card>
-);
+export default class HotelScreen extends React.Component {
+  state = { styles: [Styles().common, Styles().secondary] };
+  // constructor() {
+  //   this.state = { styles: [Styles().common, Styles().secondary] };
+  //   this.handlePress = this.handlePress.bind(this);
+  // }
+  // handlePress(){
+  //     this.setState({ styles: [Styles().common, Styles().primary] });
+  // };
+    render() {
+      return (
+        <View style={this.state.styles}>
+            <Button color="transparent" title="Hotels" onPress={this.handlePress}/>
+        </View>
+      );
+    }
 
-export default MyComponent;
+}
