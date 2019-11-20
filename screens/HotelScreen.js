@@ -6,13 +6,14 @@ const styles = Styles();
 
 export default class HotelScreen extends React.Component {
   state = { styles: [Styles().common, Styles().secondary] };
-  // constructor() {
-  //   this.state = { styles: [Styles().common, Styles().secondary] };
-  //   this.handlePress = this.handlePress.bind(this);
-  // }
-  // handlePress(){
-  //     this.setState({ styles: [Styles().common, Styles().primary] });
-  // };
+  constructor() {
+    super();
+    this.state = { styles: [Styles().common, Styles().secondary] };
+    this.handlePress = this.handlePress.bind(this);
+  }
+  handlePress(){
+      this.setState({ styles: [Styles().common, Styles().primary] });
+  };
     render() {
       return (
         <View style={this.state.styles}>

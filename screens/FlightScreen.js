@@ -7,14 +7,15 @@ const styles = Styles();
 
 export default class FlightScreen extends React.Component {
     state = { styles: [Styles().common, Styles().primary] };
-    // constructor() {
-    //     this.state = { styles: [Styles().common, Styles().primary] };
-    //     this.handlePress = this.handlePress.bind(this);
-    // }
+    constructor() {
+        super();
+        this.state = { styles: [Styles().common, Styles().primary] };
+        this.handlePress = this.handlePress.bind(this);
+    }
     
-    // handlePress() {
-    //     this.setState({ styles: [Styles().common, Styles().primary] });
-    // };
+    handlePress() {
+        this.setState({ styles: [Styles().common, Styles().primary] });
+    };
     render() {
       return (
         <View style={this.state.styles}>
