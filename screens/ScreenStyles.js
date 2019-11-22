@@ -3,25 +3,25 @@ import { StyleSheet} from 'react-native';
 function Styles() {
     const styles = StyleSheet.create({
         common: {
-            width: "95%",
+            width: "100%",
             borderRadius: "5vh",
             height: "90vh",
         },
         primary: {
-            position: "relative",
-            top: "0%",
+            position: "absolute",
+            marginTop: "0%",
             backgroundColor: "skyblue",
             zIndex: 1,
         },
         secondary: {
             position: "absolute",
-            top: "80%",
+            marginTop: "80%",
             backgroundColor: "gray",
             zIndex: 2,
         },
         third: {
             position: "absolute",
-            top: "90%",
+            marginTop: "90%",
             backgroundColor: "yellow",
             zIndex: 3,
         },
